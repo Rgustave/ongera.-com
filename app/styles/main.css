@@ -1,0 +1,963 @@
+body {
+
+   background:url('../images/bcgPicture.png')no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   margin:0px;
+   height:100%;
+   background-repeat: no-repeat; 
+}
+.main{
+  width: 1269px;
+  height: 768px;
+  padding-right: auto;
+  padding-left: auto;
+  padding-top: auto;
+  padding-bottom: auto; 
+}
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.login {
+  margin:0 auto;
+  margin-top: 200px;
+  max-width:600px;
+}
+.login-form {
+  background:#222b3a;
+  box-shadow:0px 0px 10px #000;
+}
+.login-form h4 {
+  text-align:left;
+  margin: auto;
+  margin-left:40px;
+  color:#fff;
+}
+.login-logo{
+    margin-left:180px;
+
+}
+.login-form {
+  padding-top:15px;
+  padding-bottom:10%;
+  margin:5% auto;
+  text-align:center;
+  height: 300px;
+
+}
+.login input[type="text"],
+.login input[type="password"] {
+  max-width:500px;
+  width: 80%;
+  line-height:3em;
+  font-family: 'Ubuntu', sans-serif;
+  margin:1em 2em;
+  border-radius:5px;
+  border:2px solid #f2f2f2;
+  outline:none;
+  padding-left:10px;
+  outline: none;
+  text-align: left; 
+
+
+}
+.login-form input[type="button"] {
+  height:30px;
+  width:100px;
+  background:#fff;
+  border:1px solid #f2f2f2;
+  border-radius:20px;
+  color: slategrey;
+  text-transform:uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  cursor:pointer;
+  outline: none;
+
+}
+
+.sign-up{
+  color:#f2f2f2;
+  margin: auto;
+  margin-left:-70%;
+  cursor:pointer;
+  text-decoration:underline;
+}
+
+/* All Operations */
+
+.row{
+  min-width: 100px;
+ 
+}
+
+.appHeader{
+ width: 100%;
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+  border-style: solid;
+  border-color:#F5B78D;
+ padding: 0px;
+ height: 100px;
+ margin-right: auto;
+ margin-left: auto;
+ padding-left: 0px;
+ padding-right: 0px;
+ 
+
+
+}
+.box{
+  width: 33.33%
+}
+.mainBody {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row; 
+    flex-wrap: nowrap;
+     border:2px solid #F5B78D;
+
+}
+
+.operationlogo{
+  padding: 0px;
+  height: 89px;
+  border-radius: 8px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  outline: 0;
+
+}
+
+.redText{
+   color: #F5B78D;
+   margin-bottom: 0px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.blackText{
+  color: #222B3A;
+  margin-bottom: 10px;
+  font-size: 12px;
+
+}
+.headerButton{
+  height: 100px;
+  flex-direction: column;
+  display: flex;
+
+}
+.logoutbtn{
+  height: 45px;
+  border-radius: 40px;
+  padding: 4px;
+  margin-top: 3px;
+  outline: 0;
+/*  box-shadow:0px 0px 5px #000;
+*/
+
+}
+.settingbtn{
+  height: 45px;
+  border-radius: 40px;
+  padding: 4px;
+  margin-bottom: 3px;
+/*  box-shadow:0px 0px 5px #000;
+*/
+
+}
+.userInfo{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:space-around;
+
+}
+.date{
+  margin-left: 60px;
+  margin-top: 20px;
+
+}
+.time{
+  margin-left: 80px
+}
+.mainVertical{
+   width: 16.66%;
+   flex-direction: column;
+   display: flex;
+   padding: 13px;
+   border:1px solid #F5B78D;
+
+}
+.mainSideHorizontal{
+   width: 100%;
+   flex-direction: row;
+   display: flex;
+}
+.mainSection-inner{
+  display: flex;
+  width: 83.33%;
+  flex-direction: column;
+}
+.imageSideButton{
+  margin-top: 14px;
+  width: 84px;
+  height: 88px;
+  margin-right: 7px;
+  border-radius: 20px; 
+  margin-bottom: 20px;
+  border:1px solid #F5B78D;
+  outline: 0;
+/*
+  border-style: solid;
+  border-color:;*/
+
+}
+.imageSide{
+ margin-top: 14px;
+ width: 100%;
+ height: 100%;
+ border-radius: 20px; 
+ border:1px solid #F5B78D;
+
+/* border-style: solid;
+ border-color:#F5B78D;*/
+
+}
+.getIntoOperations{
+ width: 100%;
+ background-color: #222B3A;
+ color: white;
+ text-align: center;
+ font-size: 18px;
+ font-weight: 700;
+ border:1.5px solid #F5B78D;
+ border-radius: 7px;
+ height: 30px;
+ margin: 1px;
+ margin-bottom:5px;
+
+}
+.yourInsightTitle{
+ width: 100%;
+ color: white;
+ text-align: center;
+ font-size: 14px;
+ font-weight: 500;
+ margin: 2px;
+ margin-bottom:5px;
+}
+.yourClientPremium{
+ background-color: #F5B78D;
+ color: #222B3A;
+ text-align: center;
+ font-size: 15px;
+ font-weight: 500;
+ border:1.5px solid #F5B78D;
+ border-radius: 7px;
+ height: 100%;
+ margin: 15px;
+ outline: 0;
+}
+.yourClientPremiumLongText{
+background-color: #F5B78D;
+ color: #222B3A;
+ text-align: center;
+ font-size: 15px;
+ font-weight: 500;
+ border:1.5px solid #F5B78D;
+ border-radius: 7px;
+ height: 100%;
+ margin: 15px;
+ margin-top: 30px;
+outline: 0;
+
+}
+.innerSection{
+  display: flex;
+  width: 100%;
+
+}
+
+.operationResults{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  background-color: #222B3A;
+  border: 1.5px solid #F5B78D;
+  border-radius: 70px;
+  height: 100%;
+  margin:5px;
+  outline: 0;
+}
+.InsightsRange{
+  display: flex; 
+  margin-top: 6.6%;    
+
+}
+.yourClientPremiumMin{
+  width: 33.33%;
+ background-color: #F5B78D;
+ color: #222B3A;
+ text-align: center;
+ font-size: 15px;
+ font-weight: 500;
+ border:1.5px solid #F5B78D;
+ border-radius: 7px;
+ height: 30px;
+ margin: 15px;
+ margin-left: 20px;
+ outline: 0;
+}
+.yourClientPremiumHidden{
+  width: 33.33%;
+ color: #222B3A;
+ text-align: center;
+ font-size: 15px;
+ font-weight: 500;
+ height: 30px;
+ margin: 15px;
+}
+.yourClientBtn{ 
+ width: 33.33%;
+ color: #222B3A;
+ text-align: center;
+ font-size: 15px;
+ font-weight: 500;
+ height: 30px;
+ margin: 15px;
+ margin-top: 0px;
+
+
+}
+.insigRoundButton{
+  border-radius: 40px;
+  height: 50px;
+  align-content: center;
+  width:  50px;
+  background-color: #FFC000;
+  border: 1.5px solid #222B3A;
+  margin-left: 30%;
+  color: white;
+  outline: 0;
+  font-size: 85%;
+
+
+}
+.moneySelector{
+  color: white;
+  margin-left:  320px;
+
+}
+.operationData{
+  width: 55%;
+  display:flex;
+  flex-direction: column;
+}
+.chooseCurrency {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  padding-left: 4px;
+
+}
+
+.titleCurrencyCharacteristics{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  padding-left: 4px;
+  margin-top:10px;
+}
+.operationFeaturesChar{
+   display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  padding-left: 4px;
+  margin-top:30px;
+
+}
+.titleCC{
+    background-color: #222B3A;
+    color: white;
+    border: 1.5px solid #F5B78D;
+    border-radius: 5px; 
+    padding: 0.35%;
+    font-weight: 400;
+    font-size: 0.875em;
+    width: 33.33%;
+    text-align: center;
+    outline: 0;
+}
+.titleIR{
+    background-color: #FBE5D6;
+    color: #222B3A;
+    float: right;
+    border: 1.5px solid #F5B78D;
+    border-radius: 5px;
+    padding: 0.35%;
+    font-weight: 600;
+    font-size: 1em;
+    width: 50%;
+    height: 50%;
+    margin-top: 20px;
+    align-content: center;
+    padding-right: 0px;
+    font-style: italic;
+    outline: 0;
+
+
+}
+.titleIR2{
+    background-color: #FBE5D6;
+    color: #222B3A;
+    float: right;
+    border: 1.5px solid #F5B78D;
+    border-radius: 5px;
+    padding: 0.35%;
+    font-weight: 600;
+    font-size: 1em;
+    width: 68%;
+    height: 50%;
+    margin-top: 20px;
+    align-content: center;
+    padding-right: 0px;
+    font-style: italic;
+    outline: 0;
+
+
+}
+.titleInner{
+    border-radius: 5px; 
+    padding: 0.35%;
+    font-weight: 400;
+    font-size: 0.875em;
+    width: 40%;
+    text-align: center;
+    outline: 0;
+}
+.titleInner2{
+    border-radius: 5px;
+    padding: 0.35%;
+    font-weight: 400;
+    font-size: 0.875em;
+    width: 26%;
+    text-align: center;
+    outline: 0;
+    padding-left: 0px;
+    margin-left: -4px;
+}
+
+.InterestRateBtn{
+  
+    background-color: #FBE5D6;
+    color: #dc100c;
+    border: 1.5px solid #F5B78D;
+    border-radius: 5px;
+    padding: 0.35%;
+    font-weight: 600;
+    font-size: 1em;
+    height: 50%;
+    margin-top: 20px;
+    align-content: center;
+    padding-right: 4px;
+    padding-left: 5px;
+    font-style: italic;
+    outline: 0;
+
+}
+.One{
+    background-color: #222B3A;
+    color: white;
+    border: 1.5px solid #F5B78D;
+    border-radius: 5px; 
+    padding: 0.35%;
+    font-weight: 400;
+    font-size: 0.875em;
+    width: 33.33%;
+    text-align: center;
+    outline: 0;
+}
+.InterestRateIT{
+  border-radius: 40px;
+  height: 50px;
+  align-content: center;
+  width:  50px;
+  background-color: #FBE5D6;;
+  border: 1.5px solid #F5B78D;
+  margin-left: 30%;
+  color: #F5B78;
+  outline: 0;
+  padding: 3px;
+    
+
+}
+.firstLine{
+  display: flex;
+  margin-bottom: -4px;
+  margin-left: 20%;
+}
+.seCondLine{
+
+  display: flex;
+  margin-top: -15px;
+  margin-left: 30%;
+}
+.maturityTimeBtn{
+
+  border-radius: 40px;
+  height: 50px;
+  align-content: center;
+  width:  50px;
+  background-color: #FBE5D6;;
+  border: 1.5px solid #F5B78D;
+  color: #222B3A;
+  outline: 0;
+
+}
+.MaturityDateBtn{
+    background-color: #FBE5D6;
+    color: #F5B78D;
+    border: 1.5px solid #F5B78D;
+    border-radius: 5px;
+    padding: 0.35%;
+    font-weight: 400;
+    font-size: 1.2em;
+    /* width: 50%; */
+    height: 30%;
+    margin-top: 20px;
+    align-content: center;
+    padding-right: 4px;
+    padding-left: 5px;
+
+}
+/*.computeBtn{
+    background-color: #FBE5D6;
+    color: #F5B78D;
+    border: 1.5px solid #F5B78D;
+    border-radius: 5px;
+    padding: 0.35%;
+    font-weight: 400;
+    font-size: 0.9em;
+    width: 100%;  
+    height: 100%;
+    margin-top: 20px;
+    align-content: center;
+    padding-right: 4px;
+    padding-left: 5px;
+
+}*/
+.computeBtn {
+    background-color: #FBE5D6;
+    color: #222b3a;
+    border: 1.5px solid #F5B78D;
+    border-radius: 5px;
+    padding: 0.35%;
+    font-weight: 800;
+    font-size: 0.9em;
+    width: 104%;
+    height: 70%;
+    margin-top: 20px;
+    align-content: center;
+    padding-right: 4px;
+    padding-left: 5px;
+    outline: 0;
+    margin-left: -7px;
+}
+.typeBtn{
+  border-radius: 40px;
+  height: 50px;
+  align-content: center;
+  width:  50px;
+  background-color: #FBE5D6;;
+  border: 1.5px solid #F5B78D;
+  margin-left: 30%;
+  color: red;
+  outline: 0;
+   
+}
+.ExpectedDeprecitionBtn{
+    background-color: #FBE5D6;
+    color: #222B3A;
+    float: right;
+    border: 1.5px solid #F5B78D;
+    border-radius: 5px;
+    padding: 0.35%;
+    font-weight: 600;
+    font-size: 0.9em;
+    width: 50%;
+    height: 50%;
+    margin-top: 20px;
+    align-content: center;
+    padding-right: 0px;
+    font-style: italic;
+    outline: 0;
+
+
+}
+.titleMT{
+    background-color: #FBE5D6;
+    color: #222B3A;
+    float: right;
+    border: 1.5px solid #F5B78D;
+    border-radius: 5px;
+    padding: 0.35%;
+    font-weight: 600;
+    font-size: 1em;
+    width: 50%;
+    height: 30%;
+    margin-top: 20px;
+    align-content: center;
+    padding-right: 0px;
+    font-style: italic;
+    outline: 0;
+}
+.maturityTimeBtnType{
+
+   border-radius: 40px;
+  height: 50px;
+  align-content: center;
+  width:  50px;
+  background-color: #FBE5D6;;
+  border: 1.5px solid #F5B78D;
+  color: red;
+  outline: 0;
+}
+.OtherHidden{
+    font-size: 1em;
+    width: 33.33%;
+    text-align: center;
+    padding-top: 1.5px;
+}
+.Other{
+
+    background-color: #222B3A;
+    color: #f5b78d;
+    border: 1.5px solid #F5B78D;
+    border-radius: 5px; 
+    font-size: 1em;
+    width: 33.33%;
+    text-align: center;
+    padding: 0.35%;
+    outline: 0;
+}
+.OtherHiddenFeature{
+    color: #f5b78d;
+    border-radius: 5px; 
+    font-size: 1em;
+    width: 30%;
+    text-align: center;
+    padding: 0.35%;
+    outline: 0;
+    margin-left: 26px;
+    padding-right: 0px;
+}
+.OtherHiddenFeature2{
+    color: #f5b78d;
+    border-radius: 5px; 
+    font-size: 1em;
+    width: 30%;
+    text-align: center;
+    padding: 0.35%;
+    outline: 0;
+}
+
+
+.chooseCurrencyBtn{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  margin-top:20px; 
+
+}
+
+.currencies{
+  width: 53.33%;
+  position: relative;
+
+}
+.currencies1{
+  width: 47.33%;
+  position: relative;
+
+}
+.RWF{
+  border-radius: 40px;
+  height: 60px;
+  align-content: center;
+  width:  60px;
+  background-color: #222B3A;
+  border: 1.5px solid #222B3A;
+/*  margin-left: 30%;
+*/  color: white;
+    outline: 0;
+
+}
+.USD{
+    border-radius: 40px;
+    height: 60px;
+    width: 60px;
+    align-content: center;
+    background-color: #222B3A;
+    border: 1.5px solid #222B3A;
+/*    margin-left: 30%;
+*/    color: white;
+    outline: 0;
+
+}
+.characterization{
+    background-color: #222B3A;
+    color: white;
+    border: 1.5px solid #F5B78D;
+    font-weight: 100;
+    margin-right: 423px;
+    margin-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+        outline: 0;
+}
+
+/*
+.mb1{
+ border-radius: 40px;
+    height: 50px;
+    width: 50px;
+    margin-right: 0px;
+    background-color: #F5B78D;
+    border: 1.5px solid #fff;
+
+}
+.mb2{
+   border-radius: 40px;
+    height: 50px;
+    width: 50px;
+    margin-right: 0px;
+    background-color: #F5B78D;
+    border: 1.5px solid #fff;
+  
+}
+.mb3{
+   border-radius: 40px;
+    height: 50px;
+    width: 50px;
+    margin-right: 0px;
+    background-color: #F5B78D;
+    border: 1.5px solid #fff;
+
+  
+}
+.mb4{
+   border-radius: 40px;
+    height: 50px;
+    width: 50px;
+    margin-right: 0px;
+    background-color: #F5B78D;
+    border: 1.5px solid #fff;
+
+  
+}
+.mb5{
+
+ border-radius: 40px;
+    height: 50px;
+    width: 50px;
+    margin-right: 0px;
+    background-color: #F5B78D;
+    border: 1.5px solid #fff;
+  
+}*/
+
+.operationFeatures{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
+.OperationParation{
+    background-color: #222B3A;
+    color: white;
+    border: 1.5px solid #F5B78D;
+    font-weight: 100;
+    margin-left: 140px;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    padding-right: 30px;
+    padding-left: 30px;
+    outline: 0;
+
+}
+.InterestRateType{
+    border-radius: 40px;
+    height: 50px;
+    width: 50px;
+    margin-right: 120px;
+    background-color: #F5B78D;
+    border: 1.5px solid #fff;
+    outline: 0;
+}
+.InterestRateType1{
+   border-radius: 40px;
+   height: 50px;
+   width: 50px;
+    background-color: #F5B78D;
+   border: 1.5px solid #fff;
+   margin-right: 20px;
+
+}
+.forexRate{
+    border-radius: 40px;
+    height: 50px;
+    width: 50px;
+    margin-right: 120px;
+    background-color: #F5B78D;
+    border: 1.5px solid #fff;
+    outline: 0;
+
+}
+
+.forexRate1{
+
+   border-radius: 40px;
+   height: 50px;
+   width: 50px;
+   background-color: #F5B78D;
+   border: 1.5px solid #fff;
+   margin-right: 20px;
+   outline: 0;
+}
+
+.chooseDateBtn{
+    border-radius: 40px;
+    height: 50px;
+    width: 50px;
+    margin-right: 100px;
+    background-color: #F5B78D;
+    border: 1.5px solid #fff;
+    outline: 0;
+
+}
+.chooseDateBtn1{
+    height: 100%;
+    background-color: #F5B78D;
+    border: 1.5px solid #fff;
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: 0;
+}
+.currenciesList{
+    margin-left: -140px;
+    width: 200PX;
+    font-size: small;
+  }
+.currenciesListTwo{
+    margin-left: -140px;
+    width: 200PX;
+    font-size: small;
+
+}
+.currenciesListTwo ul{
+    list-style-type: none;
+
+}
+.currenciesList ul{
+    list-style-type: none;
+
+}
+ul, ol {
+    margin-top: 0;
+    margin: 0;
+}
+.currenciesListTwo ul li{
+  background: #33404F;
+  border: black;
+  margin-bottom: 1px;
+  color: white;
+  border-radius: 3px;
+  outline: 0;
+  padding-left: 4px;
+  cursor: pointer; 
+  cursor: hand;
+
+
+
+/*  padding-right: 10px;
+*/}
+.currenciesList ul li{
+  background: #33404F;
+  border: black;
+  margin-bottom: 1px;
+  color: white;
+  border-radius: 3px;
+  margin-right: 2px;
+  outline: 0;
+  padding-left: 4px;
+/*  padding-right: 10px;
+*/}
+.currenciesList ul li :hover { 
+    background-color: #5d5e60;
+    color: white;
+
+}
+.currenciesListTwo ul li:hover { 
+    background-color: #5d5e60;
+    color: white;
+
+}
+.currenciesListTwo ul li a{
+      color: white;
+      text-decoration: none !important;
+
+}
+a { display: block;
+ }
+.currenciesList ul li a{
+      color: white;
+       text-decoration: none !important;
+
+}
+.InterestRateIT input{
+   font-size: small;
+}
+
+.insigRoundButton input{
+    font-size: small;   
+}
+
+ .inpu-text-popup{
+   padding-left: 30%;
+
+}
+.inpu-text-popup input{
+    background: #222b3a;
+    border-radius: 20px;
+    outline: none;
+    color: #F5B78D;
+    border:1.5px solid #F5B78D;
+    align-content: center;
+    font-size: small;
+    width: 80%;
+  }
+  
+  input { 
+    text-align: center; 
+    font-size: 12px;
+}
+.spin{
+  margin-left: 180px;
+  margin-top: 26px;
+  position: absolute;
+}
+.calendar_icon{
+  width: 20px;
+  height: 20px;
+}

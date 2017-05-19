@@ -1,0 +1,13 @@
+<div class="login" ng-controller = "MainCtrl as main">
+
+
+    <div ng-show="isLoading==true">
+        <div ng-include="main.loading"></div>
+    </div>
+    
+    <div ng-show="isLoading==false">
+        <div ng-include="main.login"></div>
+    </div>
+
+
+</div>

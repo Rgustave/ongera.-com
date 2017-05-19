@@ -1,0 +1,296 @@
+ <div ng-controller = "OperationCtrl as operation">
+
+
+     <script type="text/ng-template" id="inpu-text-popup.html">
+           <div class="inpu-text-popup">
+             <input ng-model = "operation.forexData.forex_rate" type="text" name="inputText">
+           </div>
+     </script>
+        <script type="text/ng-template" id="inpu-text-popup2.html">
+           <div class="inpu-text-popup">
+             <input ng-model = "operation.forexData.interest_rate_Second" type="text" name="inputText">
+           </div>
+     </script>
+        <script type="text/ng-template" id="inpu-text-popup1.html">
+           <div class="inpu-text-popup">
+             <input ng-model = "operation.forexData.interest_rate_Init" type="text" name="inputText">
+           </div>
+     </script>
+      <script type="text/ng-template" id="currency-list.html">
+           <div class="currenciesList">
+              <ul ng-repeat ="currency in operation.currencyList">
+                <li ng-click="operation.pickCurrency(currency.symbol)"><a>{{currency.symbol}}-{{currency.name}}</a></li>   
+              </ul>
+            </div>
+    </script>
+
+     <script type="text/ng-template" id="currency-list-two.html">
+           <div class="currenciesListTwo">
+              <ul ng-repeat ="currency in operation.currencyList">
+                <li ng-click="operation.pickCurrencyTwo(currency.symbol)"><a >{{currency.symbol}}-{{currency.name}}</a></li>   
+              </ul>
+            </div>
+    </script>
+
+ 
+  <!-- mugustave -->
+ <div class="appHeader">
+	<div class="box"> 
+	    <p class="redText date" >Tuesday,March 02,2017</p>
+        <p class="blackText time" >@ 02:00 P.M </p>
+	</div>
+
+	<div class="box">
+     <img class = "img-responsive operationlogo" src="../images/logoongera.png" alt="logo...">
+	</div>
+
+    <div class="box userInfo">
+        <div class=""> 
+            <img class = "img-responsive operationlogo" src="../images/profile-pic.png" alt="profile...">
+        </div>
+
+        <div class="userDeatails">
+
+         	 <p class="redText Welcome">Welcome back</p>
+             <p class="blackText name">Fabrice Benimana</p>
+             <p class="redText">Last Logged In</p>
+             <p class="blackText">11days 18h 50m </p>
+        </div>
+        <div class="headerButton">
+            <img class = "img-responsive logoutbtn" src="../images/logout.png" alt="logout...">
+            <img class = " img-responsive settingbtn" src="../images/setting.png" alt="setting...">    
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="mainBody">
+	 <div class="mainVertical">
+	   <div> 
+	        <img class = "img-responsive imageSide" src="../images/learn-more.png" alt="learn more">
+	   </div>
+	   <div> 
+	       <img class = "img-responsive imageSide" src="../images/upload-data.png" alt="upload-data...">
+	   </div>
+	   <div> 
+	       <img class = "img-responsive imageSide" src="../images/practice.png" alt="practice..">
+	   </div>
+	  <div class="mainSideHorizontal">
+	  	 <div>
+	  	  	  <img class = "img-responsive imageSideButton" src="../images/email.png" alt="email..">
+	  	 </div>
+	  	 <div>
+	  	  	 <img class = "img-responsive imageSideButton" src="../images/chat.png" alt="chat..">
+	  	 </div>
+	  </div>
+	<!--   	  </div>
+	 -->  
+    </div>
+
+	<div class="mainSection-inner">
+	      <p class="getIntoOperations"> GET INTO OPERATIONS</p>
+	      <div class="innerSection">
+		      <div class ="operationData">
+		      	<div class="chooseCurrency">
+			    	<p class="One">Choose your couple of currencies</p>
+			        <p class="Other">Local Currency</p>
+			        <p class="Other">Foreign Currency</p>
+			    </div>
+			    <div class="chooseCurrencyBtn">
+			       <div class="currencies">   	
+			       </div>
+			       <div class="currencies1">
+			           <button ng-click="operation.chooseCurrencyOne()"class="RWF">{{ operation.currencyOne.symbol}}</button>
+			       </div>
+			       <div  currency-list ng-if="operation.showCurrencyListOne == true"></div>
+
+			       <div class="currencies1">
+		             <button ng-click="operation.chooseCurrencyTwo()" class="USD">{{operation.currencyTwo.symbol}}</button>
+		           </div>
+		          <div currency-list-two go="operation.pickCurrency()" ng-if="operation.showCurrencyListTwo == true"></div>   	
+			    </div>
+			     <div class="titleCurrencyCharacteristics">
+			    	<p class="titleCC">Charactarize  each of your currencies</p>
+			        <p class="OtherHidden"></p>
+			        <p class="OtherHidden"></p>
+			     </div>
+
+			     <div class="operationFeaturesChar">
+			        <div class="titleInner">
+			    	  <p class="titleIR">Interest Rate</p>
+			    	</div>
+			    	<div class="OtherHiddenFeature">
+			    	  <input ng-click="myInputStyle={background:'#222b3a'}" ng-style="myInputStyle" ng-change="operation.onInputChange()" ng-model = "operation.forexData.interest_rate_Init" type="text" name="InterestRate" class="InterestRateIT" />
+			    	  <div inpu-text-popup1 ng-if="operation.isLongEnough.isInterest_rate_InitLong == true"></div>
+
+			    	</div>
+			    	<div class="OtherHiddenFeature">
+		 	           <input ng-click="myInputStyle1={background:'#222b3a'}" ng-style="myInputStyle1" ng-change="operation.onInputChange()" ng-model = "operation.forexData.interest_rate_Second" type="text" name="InterestRate1" class="InterestRateIT" />
+		 	           <div inpu-text-popup2 ng-if="operation.isLongEnough.isTnterest_rate_Second == true"></div>
+
+		 	        </div>
+			    </div>
+			      <div class="operationFeaturesChar">
+			        <div class="titleInner2">
+			    	<p class="titleIR2">Forex Rate</p>
+			    	</div>
+			    	<div class="OtherHiddenFeature2">
+			    	<input ng-click="myInputStyle2={background:'#222b3a'}" ng-style="myInputStyle2" ng-change="operation.onInputChange()"  ng-model = "operation.forexData.forex_rate" type="text" name="Forex Rate" class="InterestRateIT" />
+			        <div inpu-text-popup ng-if="operation.isLongEnough.isForex_rate == true"></div>
+
+			    	</div>
+			    	<!-- <div class="OtherHiddenFeature">
+		 	        <input type="text" name="Forex Rate1" class="InterestRateIT" />
+		 	        </div> -->
+			    </div>
+			    <div class="operationFeaturesChar">
+			        <div class="titleInner">
+			    	<p class="titleIR">Price Date</p>
+			    	</div>
+			    	<div class="OtherHiddenFeature">
+			        <button class="InterestRateIT">Now</button>
+			    	</div>
+			    	<div class="OtherHiddenFeature">
+				 	     <div class="input-group"
+							     moment-picker="operation.pricing_date"
+							     format="DD-MM-YYYY">
+							    <span class="input-group-addon">
+							        <i> <img class="calendar_icon" src="../images/octicons_calendar.png"></i>
+							    </span>
+							    <input class="form-control"
+							           placeholder="Select a date"
+							           ng-model="operation.pricing_date"
+							           ng-model-options="{ updateOn: 'blur' }">
+		                   </div> 
+
+                   </div>
+			    </div>
+
+			     <div class="operationFeaturesChar">
+			        <div class="titleInner">
+			    	<p class="titleMT">Maturity Time</p>
+			    	</div>
+			    	<div class="OtherHiddenFeature">
+			    	   <div class="firstLine">
+					    	<div class="">
+					           <button ng-click ="operation.buttonClik30()" class="maturityTimeBtn">30</button>
+					    	</div>
+					    	<div class="">
+					           <button ng-click ="operation.buttonClik60()" class="maturityTimeBtn">60</button>
+					    	</div>
+					    	<div class="">
+					           <button ng-click ="operation.buttonClik180()"  class="maturityTimeBtn">180</button>
+					    	</div>
+					    </div>
+					     <div class="seCondLine">
+					    	<div class="">
+					           <button ng-click ="operation.buttonClik90()" class="maturityTimeBtn">90</button>
+					    	</div>
+					    	<div class="">
+					           <button ng-click ="operation.buttonClik360()" class="maturityTimeBtn">360</button>
+					    	 </div>
+					    	<div class="">
+					           <input ng-model = "operation.oparationData.maturity" class="maturityTimeBtnType" type="text" name="MaturityTypes" placeholder="type">
+					    	</div>
+					    </div>
+
+			    	</div>
+			    	<div class="OtherHiddenFeature">
+<!-- 		             <button class="MaturityDateBtn">Maturity date</button>
+ -->		 	      
+ 	 	           <div class="input-group"
+							     moment-picker="operation.maturity"
+							     format="DD-MM-YYYY">
+							    <span class="input-group-addon">
+							        <i> <img class="calendar_icon" src="../images/octicons_calendar.png"></i>
+							    </span>
+							    <input class="form-control"
+							           placeholder="Maturity date"
+							           ng-model="operation.maturity"
+							           ng-model-options="{ updateOn: 'blur' }">
+		                 </div> 
+
+ 
+                     </div>
+			    </div>
+		        
+		        <div class="operationFeaturesChar">
+			        <div class="titleInner">
+			    	   <p class="ExpectedDeprecitionBtn">Expected Depreciation</p>
+			    	</div>
+			    	<div class="OtherHiddenFeature">
+			           <button class="typeBtn">Type</button>
+			    	</div>
+			    	<div class="OtherHiddenFeature">
+		                 <button ng-click ="operation.ComputePremiums()"  class="computeBtn">HIT HERE AT THE END TO COMPUTE YOUR PREMIUM</button>
+		 	        </div>
+		 	        <spinner class ="spin" name="ComputeSpinner" img-src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10607/spinner1.gif"></spinner>
+
+			    </div>
+			  </div>
+
+			  <div class="operationResults">
+	              <p class="yourInsightTitle"> Your Insights</p>
+
+	              <p class="yourClientPremium"> Your Client's Premium</p>
+	              <div class="InsightsRange">
+
+	              	 <p class="yourClientPremiumHidden"> </p>
+	              	 <p class="yourClientPremiumMin">Min </p>
+	              	 <p class="yourClientPremiumMin">Max </p>
+	              </div>
+
+	              <div class="InsightsRange">
+				      
+				        <p class="yourClientPremiumMin">Value </p>
+				    	<div class="yourClientBtn">
+			                 <button class="insigRoundButton">{{operation.operationResultData.min_prem}}</button>
+				    	</div>
+				    	<div class="yourClientBtn">
+			                  <button class="insigRoundButton">{{operation.operationResultData.max_prem}}</button>
+			 	        </div>
+			       </div>
+
+
+	              <div class="InsightsRange">
+				      
+				        <p class="yourClientPremiumMin">Percentage </p>
+				    	<div class="yourClientBtn">
+			                 <button class="insigRoundButton">32%</button>
+				    	</div>
+				    	<div class="yourClientBtn">
+			                  <button class="insigRoundButton">52%</button>
+			 	        </div>
+			      </div>
+
+			      <p class="yourClientPremiumLongText">
+			           <strong>Customize Comments</strong><br>
+			           premium is the first estimate based on the <br>
+
+                    figures exposed during our meeting/on the phone.<br>
+
+                    Thanks for your trust and we look forward to sign the<br>
+ 
+                    related contract soon</p>
+
+                   <p class="yourClientPremium"> What to do next ?</p>
+                   <div class="InsightsRange">
+
+	              	 <p class="yourClientPremiumMin">Print </p>
+	              	 <p class="yourClientPremiumMin">Save as Model </p>
+	              	 <p class="yourClientPremiumMin">Plot Graph</p>
+	              </div>
+                  <br>
+			  </div>
+		  </div>
+	</div>
+</div>
+</div>
+<script>
+	function ng-changeBackground() {
+		Console.log("color change")
+	    document.body.style.background = "red";
+	}
+</script>
